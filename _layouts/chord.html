@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{% if page.variations %}
+  {% for variation in page.variations %}
+    <section class="chord-variation" style="width: 300px; float: left; margin: 0 30px;">
+      <h3 style="text-align: center;">{{ variation.kankles_type }}</h3>
+      {% assign chordName = page.title %}
+      {% assign chordFingers = variation.fingers %}
+      {% include chord-diagram.html %}
+      {% if variation.notes %}
+        <p>{{ variation.notes }}</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+{% endif %}
+
+<section class="chord-content" style="clear: both; padding-top: 20px;">
+  {{ content }}
+</section>

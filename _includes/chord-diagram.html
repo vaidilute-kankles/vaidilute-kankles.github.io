@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="chord-diagram" viewBox="0 0 300 400"
+  style="border: solid 1px gray;">
+  <!-- chordName: '{{ chordName }}', chordFingers: '{{ chordFingers }}' -->
+  <text x="135" y="10" font-size="32" text-anchor="middle" alignment-baseline="hanging" fill="black">{{ chordName }}</text>
+  {% assign lineLeft = 20 %}
+  {% assign lineRight = 250 %}
+  {% assign yStart = 80 %}
+  {% assign ySpacing = 35 %}
+  {% assign xCentre = lineRight | minus: lineLeft | divided_by: 2 | plus: lineLeft %}
+  {% if chordFingers.size == 9 %}
+    {% assign strings = "G,C,D,E,F,G,A,B♭,C" | split: "," %} <!-- size==9 -->
+  {% else %}
+    {% assign strings = "G,A,C,D,E,F,G,A,B♭,C" | split: "," %} <!-- size==10 -->
+    {% assign ySpacing = 32 %}
+  {% endif %}
+
+  {% for string in strings %}
+    <line x1="{{lineLeft}}" y1="{{ forloop.index0 | times: ySpacing | plus: yStart }}" x2="{{lineRight}}" y2="{{ forloop.index0 | times: ySpacing | plus: yStart }}" stroke="black" stroke-width="2"/>
+    <text x="{{lineRight | plus: 15}}" y="{{ forloop.index0 | times: ySpacing | plus: yStart }}" font-size="26" alignment-baseline="central">{{ string }}</text>
+    {% if chordFingers[forloop.index0] > 0 %}
+      <circle cx="{{xCentre}}" cy="{{ forloop.index0 | times: ySpacing | plus: yStart }}" r="{{ySpacing | divided_by: 2 | minus: 1}}" fill="black"/>
+      <text x="{{xCentre}}" y="{{ forloop.index0 | times: ySpacing | plus: yStart }}" font-size="18" fill="white" stroke="white" text-anchor="middle" alignment-baseline="central">{{ chordFingers[forloop.index0] }}</text>
+    {% elsif chordFingers[forloop.index0] < 0 %}
+      <circle cx="{{xCentre}}" cy="{{ forloop.index0 | times: ySpacing | plus: yStart }}" r="{{ySpacing | divided_by: 2 | minus: 1}}" fill="white" stroke="#ccc" stroke-width="2" stroke-dasharray="5,2" />
+      <text x="{{xCentre}}" y="{{ forloop.index0 | times: ySpacing | plus: yStart }}" font-size="18" fill="#ccc" stroke="#ccc" text-anchor="middle" alignment-baseline="central">{{ chordFingers[forloop.index0] | abs }}</text>
+    {% endif %} 
+  {% endfor %}
+</svg>
