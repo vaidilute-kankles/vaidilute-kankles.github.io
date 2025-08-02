@@ -54,6 +54,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+exclude:
+  - MuseScore/
+
 collections:
   chords:
+    output: true
+  songs:
     output: true

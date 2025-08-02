@@ -1,0 +1,26 @@
+{% if page.musicxml %}
+<script src="/assets/scripts/opensheetmusicdisplay_v1.9.0.min.js"></script>
+<div id="osmd-container"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const osmd = new opensheetmusicdisplay.OpenSheetMusicDisplay("osmd-container");
+        osmd.TransposeCalculator = new opensheetmusicdisplay.TransposeCalculator();
+        osmd.setOptions({
+            // backend: "svg",
+            // drawTitle: true,
+            drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
+        });
+        osmd.load("{{ page.musicxml | relative_url }}").then(() => {
+            osmd.render();
+            // osmd.Sheet.Transpose = -7; // e.g. -2 for 2 semitones downwards
+            // osmd.updateGraphic();
+            // osmd.render();
+        });
+    });
+    // osmd.Sheet.Transpose = transposeValue; // e.g. -2 for 2 semitones downwards
+    // // (if you've already rendered before:)
+    // osmd.updateGraphic();
+    // osmd.render();
+</script>
+{% endif %}
+

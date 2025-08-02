@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+{% if page.pdf %}
+  <h1 style="float:right"><a href="{{ page.pdf | relative_url }}" title="Download PDF">📄</a></h1>
+{% endif %}
+<h1>{{ page.title }}</h1>
+
+{% include musicxml.html %}
+
+<section class="chord-content" style="clear: both; padding-top: 20px;">
+  {{ content }}
+</section>
+
+
+
+{% if page.chords %}
+  <h2>Chords Used</h2>
+
+  <div class="inst-selector-group">
+    <label style="margin-right: 20px"><input type="checkbox" class="inst-selector" data-type="9-string" checked> 9-String</label>
+    <label><input type="checkbox" class="inst-selector" data-type="10-string" checked> 10-String</label>
+  </div>
+
+  {% for chord_name in page.chords %}
+    {% assign chord = site.chords | where: "chord_name", chord_name | first %}
+    {% for variation in chord.variations %}
+        <a
+            href="{{ chord.url | relative_url }}"
+            class="chord-item" data-type="{{ variation.kankles_type }}"
+            style="display: block; width: 140px; float: left; margin: 20px 10px 0 10px; background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"
+        >
+            {% assign chordName = chord.title %}
+            {% assign chordFingers = variation.fingers %}
+            {% include chord-diagram.html %}
+            <div style="text-align: center; font-size: smaller; margin-top: 0;">{{ variation.kankles_type }}</div>
+    
+            {% if variation.notes %}
+                <p>{{ variation.notes }}</p>
+            {% endif %}
+        </a>
+    {% endfor %}
+  {% endfor %}
+
+  <script>
+    document.querySelectorAll(".inst-selector").forEach(inst => {
+      inst.addEventListener("click", () => {
+        const selected = inst.dataset.type;
+
+        const isChecked = inst.checked;
+
+        document.querySelectorAll(".chord-item").forEach(item => {
+          if (item.dataset.type === inst.dataset.type) {
+            item.style.display = (isChecked) ? "block" : "none";
+          }
+        });
+      });
+    });
+  </script>
+{% endif %}

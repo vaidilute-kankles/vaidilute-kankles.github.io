@@ -1,0 +1,14 @@
+---
+layout: default
+title: Songs
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<h1>🎵 Song Library</h1>
+
+<ul>
+  {% for song in site.songs %}
+    <li><a href="{{ song.url | relative_url }}" class="song-item">{{ song.title }}</a></li>
+  {% endfor %}
+</ul>
