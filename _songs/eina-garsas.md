@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Eina Garsas"
+title: "Eina garsas"
 key: "G Major"
 kankles-type: concert
 chords:

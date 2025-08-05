@@ -11,13 +11,8 @@ variations:
 
 ## About This Chord
 
-F Major is warm and resolute, often lending a sense of strength and stability to kanklės harmonies. Its rich sonority makes it ideal for grounding modal passages, especially in sutartinės that explore brighter emotional textures. The chord’s slightly lower tonal center compared to C major gives it a mellow, earthy character.
+Warm and stable with F–A–C. Supports cadences and blends well with vocal harmonies.
 
 ## Audio Preview
 
 Coming soon 🎧
-
-## Used in Songs
-
-- [Raliavimas](/songs/raliavimas.html)
-- [Žilvitis](/songs/zilvitis.html)

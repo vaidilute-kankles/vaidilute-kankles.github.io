@@ -20,6 +20,23 @@ layout: default
   {% endfor %}
 {% endif %}
 
+<section>
+  <h2>Used in Songs</h2>
+
+  {% assign found = false %}
+  <ul>
+    {% for song in site.songs %}
+      {% if song.chords contains page.chord_name %}
+        {% assign found = true %}
+        <li><a href="{{ song.url | relative_url }}">{{ song.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if found == false %}
+      <li>No songs using this chord... yet.</li>
+    {% endif %}
+  </ul>
+</section>
+
 <section class="chord-content" style="clear: both; padding-top: 20px;">
   {{ content }}
 </section>

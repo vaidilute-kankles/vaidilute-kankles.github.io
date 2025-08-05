@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Du Gaideliai - small"
+title: "Du gaideliai"
 key: "C Major"
 kankles-type: small
 chords: [C, F, G]
@@ -9,20 +9,14 @@ pdf:
 ---
 
 <pre style="font-size: 1.1em">
-C                           F              C
-Du gaideliai, Du gaideliai, Baltus žirnius kūlė.
-F             C            G        C
-Dvi vištelės, Dvi vištelės Į malūną vežė. (x2)
+<b>[C]</b>Du gaideliai, Du gaideliai, <b>[F]</b>Baltus žirnius <b>[C]</b>kūlė.
+<b>[F]</b>Dvi vištelės, <b>[C]</b>Dvi vištelės <b>[G]</b>Į malūną <b>[C]</b>vežė. (x2)
 
-C                     F            C
-Ožys malė, Ožys malė, Ožka pik-lia-vo-jo,
-F           C        G            C
-O ši trečia ožkytėlė Miltus nu-si-jo-jo.  (x2)
+<b>[C]</b>Ožys malė, Ožys malė, <b>[F]</b>Ožka pik-lia-<b>[C]</b>vo-jo,
+<b>[F]</b>O ši trečia <b>[C]</b>ožkytėlė <b>[G]</b>Miltus nu-si-<b>[C]</b>jo-jo.  (x2)
 
-C                       F             C
-Musė maišė, Musė maišė, Uodas vandens ne-šė.
-F           C           G         C
-Saulė virė, Saulė virė, Mėnesėlis ke-pė.  (x2)
+<b>[C]</b>Musė maišė, Musė maišė, <b>[F]</b>Uodas vandens <b>[C]</b>ne-šė.
+<b>[F]</b>Saulė virė, <b>[C]</b>Saulė virė, <b>[G]</b>Mėnesėlis <b>[C]</b>ke-pė.  (x2)
 </pre>
 
 <!--

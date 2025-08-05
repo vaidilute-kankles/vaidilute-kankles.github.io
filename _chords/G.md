@@ -11,13 +11,8 @@ variations:
 
 ## About This Chord
 
-G Major is bold and expansive, often used to lift kanklės melodies into brighter, more expressive territory. Its resonant quality makes it a favorite for sutartinės that emphasize open intervals and harmonic movement. As a dominant chord in the key of C, it naturally leads the listener toward resolution, adding dynamic tension to modal transitions.
+Voiced with G (drone), D, F, and A, this version blends major and minor colors. Though unconventional, it creates a rich, folk-friendly harmony that works surprisingly well in traditional arrangements.
 
 ## Audio Preview
 
 Coming soon 🎧
-
-## Used in Songs
-
-- [Raliavimas](/songs/raliavimas.html)
-- [Žilvitis](/songs/zilvitis.html)

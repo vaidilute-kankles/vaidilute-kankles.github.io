@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Tyli Naktis (Silent Night)"
+title: "Tyli naktis (Silent night)"
 key: "G Major"
 kankles-type: concert
 chords:

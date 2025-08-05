@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Polka Keturinė"
+title: "Polka keturinė"
 key: "G Major"
 kankles-type: concert
 chords:

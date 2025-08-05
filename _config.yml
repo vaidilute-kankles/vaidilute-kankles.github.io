@@ -18,16 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kanklės - Vaidilute
-email: kankles-vaidilute@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: „Vaidilutė“ Kanklių Ansamblis
+email: vaidilutekankles@gmail.com
+description: >-
+  Vaidilutė is a Melbourne-based kanklės ensemble keeping Baltic folk music
+  alive with heart, heritage, and handcrafted instruments.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kankles_vaidilute
-github_username:  kankles-vaidilute
+url: "https://vaidilute-kankles.com" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: vaidilute.kankles
+github_username:  vaidilute-kankles
 
 # Build settings
 theme: minima
@@ -58,7 +57,12 @@ exclude:
   - MuseScore/
 
 collections:
-  chords:
-    output: true
   songs:
     output: true
+  chords:
+    output: true
+
+header_pages :
+  - songs.html
+  - chords.html
+  - about.markdown

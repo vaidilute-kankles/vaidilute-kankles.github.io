@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Plaukia Sau Laivelis"
+title: "Plaukia sau laivelis"
 key: "G Major"
 kankles-type: concert
 chords:

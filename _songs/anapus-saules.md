@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Anapus Saulės"
+title: "Anapus saulės"
 key: "G Major"
 kankles-type: concert
 chords:

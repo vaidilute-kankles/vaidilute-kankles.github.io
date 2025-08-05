@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Oi Neverk, Matušėle"
+title: "Oi neverk, matušėle"
 key: "G Major"
 kankles-type: concert
 chords:

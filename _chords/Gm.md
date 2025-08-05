@@ -11,13 +11,8 @@ variations:
 
 ## About This Chord
 
-D Minor is rich and melancholic, often used in sutartinės with modal transitions. Its introspective quality lends emotional depth to kanklės arrangements, especially in pieces that explore longing or reflection. As a minor chord, it contrasts beautifully with brighter harmonies, creating space for expressive nuance.
+G–B♭–D fits perfectly with the tuning. Rich and modal, great for traditional and darker melodies.
 
 ## Audio Preview
 
 Coming soon 🎧
-
-## Used in Songs
-
-- [Raliavimas](/songs/raliavimas.html)
-- [Žilvitis](/songs/zilvitis.html)

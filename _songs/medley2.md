@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Medley2 - Ištekės Marceliukė, Mylejau Mergele, Polka Keturine"
+title: "Polka Medley"
 key: "G Major"
 kankles-type: concert
 chords:

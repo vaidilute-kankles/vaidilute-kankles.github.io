@@ -2,10 +2,23 @@
 layout: default
 ---
 
-{% if page.pdf %}
-  <h1 style="float:right"><a href="{{ page.pdf | relative_url }}" title="Download PDF">📄</a></h1>
-{% endif %}
-<h1>{{ page.title }}</h1>
+
+<article class="post h-entry">
+
+  <header class="post-header">
+    {% if page.pdf %}
+      <span class="post-meta h-card" style="float:right"><a href="{{ page.pdf | relative_url }}" title="Download PDF">📄 pdf</a></span>
+    {% endif %}
+    <h1 class="post-title p-name">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <span class="dt-published">
+        {{ page.key }}
+      </span>
+      {%- if page.kankles-type -%}
+        • <span itemprop="kankles-type"><span class="p-author h-card">For kanklės type: {{ page.kankles-type }}</span></span>
+      {%- endif -%}
+    </p>
+  </header>
 
 {% include musicxml.html %}
 
@@ -19,8 +32,8 @@ layout: default
   <h2>Chords Used</h2>
 
   <div class="inst-selector-group">
-    <label style="margin-right: 20px"><input type="checkbox" class="inst-selector" data-type="9-string" checked> 9-String</label>
-    <label><input type="checkbox" class="inst-selector" data-type="10-string" checked> 10-String</label>
+    <label style="margin-right: 20px"><input type="radio" name="inst-selector" class="inst-selector" data-type="9-string"> 9-String</label>
+    <label><input type="radio" name="inst-selector" class="inst-selector" data-type="10-string"> 10-String</label>
   </div>
 
   {% for chord_name in page.chords %}
@@ -44,18 +57,65 @@ layout: default
   {% endfor %}
 
   <script>
+    // Helper to show/hide chord items based on selected type
+    function updateChordDisplay(selectedType) {
+      document.querySelectorAll(".chord-item").forEach(item => {
+        item.style.display = (item.dataset.type === selectedType) ? "block" : "none";
+      });
+    }
+
+    // On page load, set radio button and chord display from localStorage or default
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedType = localStorage.getItem("kankles_inst_type") || "9-string";
+      const radios = document.querySelectorAll(".inst-selector");
+      radios.forEach(radio => {
+        radio.checked = (radio.dataset.type === savedType);
+      });
+      updateChordDisplay(savedType);
+    });
+
+    // Add event listeners to radio buttons
     document.querySelectorAll(".inst-selector").forEach(inst => {
-      inst.addEventListener("click", () => {
-        const selected = inst.dataset.type;
-
-        const isChecked = inst.checked;
-
-        document.querySelectorAll(".chord-item").forEach(item => {
-          if (item.dataset.type === inst.dataset.type) {
-            item.style.display = (isChecked) ? "block" : "none";
-          }
-        });
+      inst.addEventListener("change", () => {
+        if (inst.checked) {
+          localStorage.setItem("kankles_inst_type", inst.dataset.type);
+          updateChordDisplay(inst.dataset.type);
+        }
       });
     });
   </script>
+  <div style="clear: both;"></div>
 {% endif %}
+
+
+  <div style="clear:both; margin-top: 40px; text-align: center;">
+    {% assign found = false %}
+    {% assign prev_song = nil %}
+    {% assign next_song = nil %}
+
+    {% for s in site.songs %}
+      {% if found == true and next_song == nil %}
+        {% assign next_song = s %}
+        {% break %}
+      {% endif %}
+      {% if s.url == page.url %}
+        {% assign found = true %}
+      {% elsif found == false %}
+        {% assign prev_song = s %}
+      {% endif %}
+    {% endfor %}
+
+    <div>
+      {% if prev_song %}
+        <a href="{{ prev_song.url | relative_url }}">&laquo; {{ prev_song.title }}<!--Previous Song--></a>
+        &nbsp;|&nbsp;
+      {% endif %}
+      <a href="{{ '/songs/' | relative_url }}">All songs</a>
+      {% if next_song %}
+        &nbsp;|&nbsp;
+        <a href="{{ next_song.url | relative_url }}"><!--Next Song-->{{ next_song.title }} &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
+
+  </article>

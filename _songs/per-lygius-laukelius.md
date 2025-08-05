@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Per Lygius Laukelius"
+title: "Per lygius laukelius"
 key: "G Major"
 kankles-type: concert
 chords:

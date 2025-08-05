@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Grazi Maria Tu Esi"
+title: "Grazi Maria tu esi"
 key: "G Major"
 kankles-type: concert
 chords:

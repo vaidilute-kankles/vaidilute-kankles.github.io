@@ -5,10 +5,27 @@ title: Songs
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-<h1>🎵 Song Library</h1>
+<h2>Songs</h2>
 
-<ul>
+<!-- <ul>
   {% for song in site.songs %}
     <li><a href="{{ song.url | relative_url }}" class="song-item">{{ song.title }}</a></li>
   {% endfor %}
-</ul>
+</ul> -->
+
+{%- if site.songs.size > 0 -%}
+  <ul class="post-list">
+    {%- for song in site.songs -%}
+    <li>
+      <h3>
+        <a class="post-link" href="{{ song.url | relative_url }}">
+          {{ song.title | escape }}
+        </a>
+      {%- if song.kankles-type -%}
+      <span class="post-meta">For {{ song.kankles-type }} kanklės</span>
+      {%- endif -%}
+      </h3>
+    </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

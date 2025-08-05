@@ -3,34 +3,43 @@ layout: default
 title: Chords
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-<h1>🎼 Chords Library</h1>
-
-<div class="inst-selector-group">
+<!--<div class="inst-selector-group">
   <label style="margin-right: 20px"><input type="checkbox" class="inst-selector" data-type="9-string" checked> 9-String</label>
   <label><input type="checkbox" class="inst-selector" data-type="10-string" checked> 10-String</label>
-</div>
+</div>-->
 
-{% for chord in site.chords %}
-    {% for variation in chord.variations %}
-        <a
-            href="{{ chord.url | relative_url }}"
-            class="chord-item" data-type="{{ variation.kankles_type }}"
-            style="display: block; width: 140px; float: left; margin: 20px 10px 0 10px; background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"
-        >
-            {% assign chordName = chord.title %}
-            {% assign chordFingers = variation.fingers %}
-            {% include chord-diagram.html %}
-            <div style="text-align: center; font-size: smaller; margin-top: 0;">{{ variation.kankles_type }}</div>
-    
-            {% if variation.notes %}
-                <p>{{ variation.notes }}</p>
-            {% endif %}
-        </a>
-    {% endfor %}
+{% assign typeList = "9-string,10-string" | split: "," %}
+
+{% for kanklesType in typeList %}
+  <h2 style="clear:both;">
+    <!--<input type="checkbox" class="inst-selector" data-type="{{ kanklesType }}" checked>-->
+    {{ kanklesType }} chords
+  </h2>
+
+  {% for chord in site.chords %}
+      {% for variation in chord.variations %}
+          {% if variation.kankles_type != kanklesType %}
+              {% continue %}
+          {% endif %}
+          <a
+              href="{{ chord.url | relative_url }}"
+              class="chord-item" data-type="{{ variation.kankles_type }}"
+              style="display: block; width: 140px; float: left; margin: 20px 10px 0 10px; background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-align: center;"
+          >
+              {% assign chordName = chord.title %}
+              {% assign chordFingers = variation.fingers %}
+              {% include chord-diagram.html %}
+              <div style="text-align: center; font-size: smaller; margin-top: 0;">{{ variation.kankles_type }}</div>
+      
+              {% if variation.notes %}
+                  <p>{{ variation.notes }}</p>
+              {% endif %}
+          </a>
+      {% endfor %}
+  {% endfor %}
+  <p style="clear: both;">&nbsp;</p>
 {% endfor %}
-
+<!--
 <div style="clear: both; margin-top: 50px; padding-top: 50px;"><hr /></div>
 
 <ul id="chord-list">
@@ -40,7 +49,7 @@ title: Chords
     </li>
   {% endfor %}
 </ul>
-
+-->
 <script>
   document.querySelectorAll(".inst-selector").forEach(inst => {
     inst.addEventListener("click", () => {

@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Augo Sode Klevelis"
+title: "Augo sode klevelis"
 key: "G Major"
 kankles-type: concert
 chords:

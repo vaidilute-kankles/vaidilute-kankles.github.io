@@ -12,13 +12,8 @@ variations:
 
 ## About This Chord
 
-C Major is bright and open, often evoking clarity and resolution. In kanklės arrangements, it serves as a grounding tonic, anchoring modal explorations with its stable triadic harmony. Its simplicity makes it a common starting point for sutartinės that transition between major and minor textures.
+Bright and central to the instrument’s tuning. C–E–G is fully playable and harmonizes naturally with the G drone.
 
 ## Audio Preview
 
 Coming soon 🎧
-
-## Used in Songs
-
-- [Raliavimas](/songs/raliavimas.html)
-- [Žilvitis](/songs/zilvitis.html)

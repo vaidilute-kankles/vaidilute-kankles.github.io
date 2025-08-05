@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Ant Kalno Gluosnys"
+title: "Ant kalno gluosnys"
 key: "G Major"
 kankles-type: concert
 chords:
