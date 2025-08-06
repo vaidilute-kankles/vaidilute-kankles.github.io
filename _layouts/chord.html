@@ -40,3 +40,33 @@ layout: default
 <section class="chord-content" style="clear: both; padding-top: 20px;">
   {{ content }}
 </section>
+
+<div style="clear:both; margin-top: 40px; text-align: center;">
+  {% assign found = false %}
+  {% assign prev_chord = nil %}
+  {% assign next_chord = nil %}
+
+  {% for c in site.chords %}
+    {% if found == true and next_chord == nil %}
+      {% assign next_chord = c %}
+      {% break %}
+    {% endif %}
+    {% if c.url == page.url %}
+      {% assign found = true %}
+    {% elsif found == false %}
+      {% assign prev_chord = c %}
+    {% endif %}
+  {% endfor %}
+
+  <div>
+    {% if prev_chord %}
+      <a href="{{ prev_chord.url | relative_url }}">&laquo; {{ prev_chord.title }}<!--Previous chord--></a>
+      &nbsp;|&nbsp;
+    {% endif %}
+    <a href="{{ '/chords/' | relative_url }}">All chords</a>
+    {% if next_chord %}
+      &nbsp;|&nbsp;
+      <a href="{{ next_chord.url | relative_url }}"><!--Next chord-->{{ next_chord.title }} &raquo;</a>
+    {% endif %}
+  </div>
+</div>

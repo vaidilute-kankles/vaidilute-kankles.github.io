@@ -16,6 +16,7 @@ CONTENT
 - download the sheet music
 - videos for songs, maybe even for chords
 - exercises (along with videos)
+- maybe a Techniques, Excercises and Tips section (maybe need a one-word title for that... 'Skills'? Or maybe just 'Technique')
 - links to our favourite versions of songs by others
 - links to other kankles things (groups, people, etc)
 - performances, maybe? Or links to events (maybe from facebook)

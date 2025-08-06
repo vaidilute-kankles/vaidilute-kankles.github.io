@@ -24,7 +24,7 @@ description: >-
   Vaidilutė is a Melbourne-based kanklės ensemble keeping Baltic folk music
   alive with heart, heritage, and handcrafted instruments.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vaidilute-kankles.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.vaidilutekankles.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: vaidilute.kankles
 github_username:  vaidilute-kankles
 
