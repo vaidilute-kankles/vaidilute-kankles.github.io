@@ -1,0 +1,76 @@
+---
+layout: song
+title: "Hallelujah"
+key: "C Major"
+kankles-type: small
+chords: [C, Am, F, G, E7]
+musicxml:
+pdf:
+---
+
+<pre style="font-size: 1.1em">
+[Intro]
+<b>C Am C Am</b>
+ 
+[Verse 1]
+<b>  C                 Am</b>
+I heard there was a secret chord
+
+<b>     C                   Am</b>
+That David played and it pleased the Lord
+
+<b>    F                G               C        G</b>
+But you don't really care for music, do you?
+
+<b>        C                  F           G</b>
+Well it goes like this the fourth, the fifth
+
+<b>    Am                 F</b>
+The minor fall and the major lift
+
+<b>    G            E7             Am</b>
+The baffled king composing hallelujah
+ 
+[Chorus]
+<b>     F           Am          F           C    G   C      Am C Am</b>
+Hallelujah, hallelujah, hallelujah, hallelu-u-u-u-jah ....
+
+[Outro]
+<b>     F           Am          F           C    G   C</b>
+Hallelujah, hallelujah, hallelujah, hallelu-u-u-u ....   (x3)
+
+<b>Am        F   G     C</b>
+     Halleluuuuuuujah
+
+[Verse 2]
+Well, your faith was strong but you needed proof
+You saw her bathing on the roof
+Her beauty and the moonlight overthrew you
+She tied you to her kitchen chair
+She broke your throne and she cut your hair
+And from your lips she drew the hallelujah
+ 
+[Verse 3]
+Baby, I've been here before
+I've seen this room and I've walked this floor
+I used to live alone before I knew you
+I've seen your flag on the marble arch
+But love is not a victory march
+It's a cold and it's a broken hallelujah
+ 
+[Verse 4]
+Well, there was a time when you let me know
+What's really going on below
+But now you never show that to me do you
+But remember when I moved in you
+And the holy dove was moving too
+And every breath we drew was hallelujah
+ 
+[Verse 5]
+Well, maybe there's a God above
+But all I've ever learned from love
+Was how to shoot somebody who outdrew you
+It's not a cry that you hear at night
+It's not somebody who's seen the light
+It's a cold and it's a broken hallelujah
+</pre>
