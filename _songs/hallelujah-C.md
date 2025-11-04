@@ -4,8 +4,8 @@ title: "Hallelujah"
 key: "C Major"
 kankles-type: small
 chords: [C, Am, F, G, E7]
-musicxml:
-pdf:
+musicxml: /assets/musicxml/Hallelujah.mxl
+pdf: /assets/pdfs/Hallelujah.pdf
 ---
 
 <pre style="font-size: 1.1em">
