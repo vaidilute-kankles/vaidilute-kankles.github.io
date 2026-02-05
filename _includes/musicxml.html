@@ -8,7 +8,8 @@
         osmd.setOptions({
             // backend: "svg",
             // drawTitle: true,
-            drawingParameters: "compacttight" // don't display title, composer etc., smaller margins
+            drawingParameters: "compacttight", // don't display title, composer etc., smaller margins
+            spacingFactorSoftmax: 100
         });
         osmd.load("{{ page.musicxml | relative_url }}").then(() => {
             osmd.render();
